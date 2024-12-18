@@ -291,9 +291,11 @@ def thermo_parse(value):
 
 
 def light_parse(value):
+    room_name = config.get('User', 'current_room', fallback='livingroom')  # 방 이름 가져오기
+    light_count = light_count_dic.get(room_name, 3)  # 방별 조명 개수
     ret = {}
-    for i in range(1, int(config.get('User', 'light_count'))+1):
-        ret['light_'+str(i)] = 'off' if value[i*2-2:i*2] == '00' else 'on'
+    for i in range(1, light_count + 1):
+        ret[f'light_{i}'] = 'off' if value[i*2-2:i*2] == '00' else 'on'
     return ret
 
 
