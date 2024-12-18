@@ -637,18 +637,19 @@ def publish_discovery(dev, sub=''):
         if logtxt != "" and config.get('Log', 'show_mqtt_publish') == 'True':
             logging.info(logtxt)
     elif dev == 'light':
-        for num in range(1, int(config.get('User', 'light_count'))+1):
-            #ha_topic = 'homeassistant/light/kocom_livingroom_light1/config'
-            topic = 'homeassistant/light/kocom_livingroom_light{}/config'.format(num)
+        room_name = sub if sub else 'livingroom'
+        light_count = light_count_dic.get(room_name, 3)  # 방에 따른 조명 개수 가져오기
+        for num in range(1, light_count + 1):
+            topic = f'homeassistant/light/kocom_{room_name}_light{num}/config'
             payload = {
-                'name': 'Kocom Livingroom Light{}'.format(num),
-                'cmd_t': 'kocom/livingroom/light/{}/command'.format(num),
-                'stat_t': 'kocom/livingroom/light/state',
-                'stat_val_tpl': '{{ value_json.light_' + str(num) + ' }}',
+                'name': f'Kocom {room_name.capitalize()} Light{num}',
+                'cmd_t': f'kocom/{room_name}/light/{num}/command',
+                'stat_t': f'kocom/{room_name}/light/state',
+                'stat_val_tpl': f'{{{{ value_json.light_{num} }}}}',
                 'pl_on': 'on',
                 'pl_off': 'off',
                 'qos': 0,
-                'uniq_id': '{}_{}_{}{}'.format('kocom', 'wallpad', dev, num),
+                'uniq_id': f'kocom_{room_name}_light{num}',
                 'device': {
                     'name': '코콤 스마트 월패드',
                     'ids': 'kocom_smart_wallpad',
