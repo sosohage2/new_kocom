@@ -639,10 +639,10 @@ def publish_discovery(dev, sub=''):
             'qos': 0,
             'uniq_id': '{}_{}_{}'.format('kocom', 'wallpad', dev),
             'device': {
-                'name': '코콤 스마트 월패드',
-                'ids': 'kocom_smart_wallpad',
+                'name': 'kocom_pad',
+                'ids': 'ko_pad',
                 'mf': 'KOCOM',
-                'mdl': '스마트 월패드',
+                'mdl': 's_w_pad',
                 'sw': SW_VERSION
             }
         }
@@ -664,10 +664,10 @@ def publish_discovery(dev, sub=''):
                 'icon': f'mdi:{icon}',
                 'unit_of_meas': unit,
                 'device': {
-                    'name': '코콤 스마트 월패드',
-                    'ids': 'kocom_smart_wallpad',
+                    'name': 'kocom_pad',
+                    'ids': 'ko_pad',
                     'mf': 'KOCOM',
-                    'mdl': '스마트 월패드',
+                    'mdl': 's_w_pad',
                     'sw': SW_VERSION
                 }
             }
@@ -688,10 +688,10 @@ def publish_discovery(dev, sub=''):
             'qos': 0,
             'uniq_id': '{}_{}_{}'.format('kocom', 'wallpad', dev),
             'device': {
-                'name': '코콤 스마트 월패드',
-                'ids': 'kocom_smart_wallpad',
+                'name': 'kocom_pad',
+                'ids': 'ko_pad',
                 'mf': 'KOCOM',
-                'mdl': '스마트 월패드',
+                'mdl': 's_w_pad',
                 'sw': SW_VERSION
             }
         }
@@ -712,10 +712,10 @@ def publish_discovery(dev, sub=''):
             'qos': 0,
             'uniq_id': '{}_{}_{}'.format('kocom', 'wallpad', dev),
             'device': {
-                'name': '코콤 스마트 월패드',
-                'ids': 'kocom_smart_wallpad',
+                'name': 'kocom_pad',
+                'ids': 'ko_pad',
                 'mf': 'KOCOM',
-                'mdl': '스마트 월패드',
+                'mdl': 's_w_pad',
                 'sw': SW_VERSION
             }
         }
@@ -740,10 +740,10 @@ def publish_discovery(dev, sub=''):
                 'uniq_id': '{}_{}_{}{}'.format('kocom', sub, dev, num),            # 20221108 수정
                                                                     
                 'device': {
-                    'name': '코콤 스마트 월패드',
-                    'ids': 'kocom_smart_wallpad',
+                    'name': 'kocom_pad',
+                    'ids': 'ko_pad',
                     'mf': 'KOCOM',
-                    'mdl': '스마트 월패드',
+                    'mdl': 's_w_pad',
                     'sw': SW_VERSION
                 }
             }
@@ -774,10 +774,10 @@ def publish_discovery(dev, sub=''):
             'qos': 0,
             'uniq_id': '{}_{}_{}{}'.format('kocom', 'wallpad', dev, num),
             'device': {
-                'name': '코콤 스마트 월패드',
-                'ids': 'kocom_smart_wallpad',
+                'name': 'kocom_pad',
+                'ids': 'ko_pad',
                 'mf': 'KOCOM',
-                'mdl': '스마트 월패드',
+                'mdl': 's_w_pad',
                 'sw': SW_VERSION
             }
         }
@@ -811,10 +811,10 @@ def publish_discovery(dev, sub=''):
             'max_temp': 30,
             'uniq_id': 'kocom_ac_{}'.format(num),
             'device': {
-                'name': '코콤 스마트 월패드',
-                'ids': 'kocom_smart_wallpad',
+                'name': 'kocom_pad',
+                'ids': 'ko_pad',
                 'mf': 'KOCOM',
-                'mdl': 'K스마트 월패드',
+                'mdl': 's_w_pad',
                 'sw': SW_VERSION
             }
         }
@@ -830,10 +830,10 @@ def publish_discovery(dev, sub=''):
             'qos': 0,
             'uniq_id': '{}_{}_{}'.format('kocom', 'wallpad', dev),
             'device': {
-                'name': '코콤 스마트 월패드',
-                'ids': 'kocom_smart_wallpad',
+                'name': 'kocom_pad',
+                'ids': 'ko_pad',
                 'mf': 'KOCOM',
-                'mdl': '스마트 월패드',
+                'mdl': 's_w_pad',
                 'sw': SW_VERSION
             }
         }
