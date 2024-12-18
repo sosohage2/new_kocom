@@ -23,7 +23,7 @@ import configparser
 
 
 # define -------------------------------
-SW_VERSION = '2023.08.012'
+SW_VERSION = '2024.12.19'
 CONFIG_FILE = 'kocom.conf'
 BUF_SIZE = 100
 
@@ -637,9 +637,9 @@ def publish_discovery(dev, sub=''):
             'pl_on': 'on',
             'pl_off': 'off',
             'qos': 0,
-            'uniq_id': '{}_{}_{}'.format('kocom', 'wallpad', dev),
+            'uniq_id': '{}'.format(dev),
             'device': {
-                'name': 'kocom_pad',
+                'name': 'k_pad',
                 'ids': 'ko_pad',
                 'mf': 'KOCOM',
                 'mdl': 's_w_pad',
@@ -664,7 +664,7 @@ def publish_discovery(dev, sub=''):
                 'icon': f'mdi:{icon}',
                 'unit_of_meas': unit,
                 'device': {
-                    'name': 'kocom_pad',
+                    'name': 'k_pad',
                     'ids': 'ko_pad',
                     'mf': 'KOCOM',
                     'mdl': 's_w_pad',
@@ -686,9 +686,9 @@ def publish_discovery(dev, sub=''):
             'pl_off': 'off',
             'ic': 'mdi:gas-cylinder',
             'qos': 0,
-            'uniq_id': '{}_{}_{}'.format('kocom', 'wallpad', dev),
+            'uniq_id': '{}'.format(dev),
             'device': {
-                'name': 'kocom_pad',
+                'name': 'k_pad',
                 'ids': 'ko_pad',
                 'mf': 'KOCOM',
                 'mdl': 's_w_pad',
@@ -710,9 +710,9 @@ def publish_discovery(dev, sub=''):
             'pl_off': 'off',
             'ic': 'mdi:elevator',
             'qos': 0,
-            'uniq_id': '{}_{}_{}'.format('kocom', 'wallpad', dev),
+            'uniq_id': '{}'.format(dev),
             'device': {
-                'name': 'kocom_pad',
+                'name': 'k_pad',
                 'ids': 'ko_pad',
                 'mf': 'KOCOM',
                 'mdl': 's_w_pad',
@@ -737,10 +737,10 @@ def publish_discovery(dev, sub=''):
                 'pl_off': 'off',
                 'qos': 0,
 #               'uniq_id': '{}_{}_{}{}'.format('kocom', 'wallpad', dev, num),      # 20221108 주석처리
-                'uniq_id': '{}_{}_{}{}'.format('kocom', sub, dev, num),            # 20221108 수정
+                'uniq_id': '{}_{}{}'.format(sub, dev, num),            # 20221108 수정
                                                                     
                 'device': {
-                    'name': 'kocom_pad',
+                    'name': 'k_pad',
                     'ids': 'ko_pad',
                     'mf': 'KOCOM',
                     'mdl': 's_w_pad',
@@ -772,9 +772,9 @@ def publish_discovery(dev, sub=''):
             'max_temp': 30,
             'ret': 'false',
             'qos': 0,
-            'uniq_id': '{}_{}_{}{}'.format('kocom', 'wallpad', dev, num),
+            'uniq_id': '{}{}'.format(dev, num),
             'device': {
-                'name': 'kocom_pad',
+                'name': 'k_pad',
                 'ids': 'ko_pad',
                 'mf': 'KOCOM',
                 'mdl': 's_w_pad',
@@ -811,7 +811,7 @@ def publish_discovery(dev, sub=''):
             'max_temp': 30,
             'uniq_id': 'kocom_ac_{}'.format(num),
             'device': {
-                'name': 'kocom_pad',
+                'name': 'k_pad',
                 'ids': 'ko_pad',
                 'mf': 'KOCOM',
                 'mdl': 's_w_pad',
@@ -828,9 +828,9 @@ def publish_discovery(dev, sub=''):
             'name': 'Kocom Wallpad Query',
             'cmd_t': 'kocom/myhome/query/command',
             'qos': 0,
-            'uniq_id': '{}_{}_{}'.format('kocom', 'wallpad', dev),
+            'uniq_id': '{}'.format(dev),
             'device': {
-                'name': 'kocom_pad',
+                'name': 'k_pad',
                 'ids': 'ko_pad',
                 'mf': 'KOCOM',
                 'mdl': 's_w_pad',
